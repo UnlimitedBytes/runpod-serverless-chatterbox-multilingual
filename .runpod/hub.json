@@ -1,0 +1,85 @@
+{
+  "title": "Chatterbox TTS Multilingual",
+  "description": "Zero-shot text-to-speech synthesis with emotion control and voice cloning capabilities by Resemble AI.",
+  "type": "serverless",
+  "category": "audio",
+  "iconUrl": "https://storage.googleapis.com/resemble-ai-docs-public-files/resemble_logo.svg",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 10,
+    "gpuIds": "ADA_48_PRO",
+    "gpuCount": 1,
+    "presets": [
+      {
+        "name": "English TTS",
+        "defaults": {
+          "text": "We're excited to introduce Chatterbox, our first production-grade open source TTS model. Licensed under MIT, Chatterbox has been benchmarked against leading closed-source systems like ElevenLabs, and is consistently preferred in side-by-side evaluations. Whether you're working on memes, videos, games, or AI agents, Chatterbox brings your content to life.",
+          "language": "en",
+          "exaggeration": 0.5,
+          "cfg_weight": 0.5,
+          "temperature": 0.8,
+          "repetition_penalty": 1.2,
+          "min_p": 0.05,
+          "top_p": 1.0,
+          "return_format": "base64"
+        }
+      },
+      {
+        "name": "Multilingual Spanish",
+        "defaults": {
+          "text": "Estamos emocionados de presentar Chatterbox, nuestro primer modelo TTS de código abierto de calidad de producción. Con licencia MIT, Chatterbox ha sido comparado con sistemas cerrados líderes como ElevenLabs, y es consistentemente preferido en evaluaciones lado a lado.",
+          "language": "es",
+          "exaggeration": 0.5,
+          "cfg_weight": 0.5,
+          "temperature": 0.8,
+          "repetition_penalty": 2.0,
+          "min_p": 0.05,
+          "top_p": 1.0,
+          "return_format": "base64"
+        }
+      },
+      {
+        "name": "Multilingual French",
+        "defaults": {
+          "text": "Nous sommes ravis de présenter Chatterbox, notre premier modèle TTS open source de qualité production. Sous licence MIT, Chatterbox a été évalué par rapport aux systèmes fermés de premier plan comme ElevenLabs.",
+          "language": "fr",
+          "exaggeration": 0.5,
+          "cfg_weight": 0.5,
+          "temperature": 0.8,
+          "repetition_penalty": 2.0,
+          "min_p": 0.05,
+          "top_p": 1.0,
+          "return_format": "base64"
+        }
+      },
+      {
+        "name": "Expressive Speech",
+        "defaults": {
+          "text": "What a wonderful and absolutely amazing day it is today! The sun is shining brilliantly!",
+          "language": "en",
+          "exaggeration": 0.7,
+          "cfg_weight": 0.3,
+          "temperature": 0.8,
+          "repetition_penalty": 1.2,
+          "min_p": 0.05,
+          "top_p": 1.0,
+          "return_format": "base64"
+        }
+      },
+      {
+        "name": "Clear Neutral Speech",
+        "defaults": {
+          "text": "This is a clear, neutral speech synthesis example with balanced parameters for professional applications.",
+          "language": "en",
+          "exaggeration": 0.4,
+          "cfg_weight": 0.6,
+          "temperature": 0.7,
+          "repetition_penalty": 1.1,
+          "min_p": 0.05,
+          "top_p": 0.95,
+          "return_format": "base64"
+        }
+      }
+    ]
+  }
+}
