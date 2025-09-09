@@ -5,7 +5,8 @@ RUN ln -sf $(which python3.11) /usr/local/bin/python && \
     ln -sf $(which python3.11) /usr/local/bin/python3  
   
 # Install packages directly from PyPI  
-RUN python -m pip install --upgrade pip && \  
+RUN python -m pip install --upgrade pip && \
+    python -m pip install numpy && \
     python -m pip install chatterbox-tts runpod hf-transfer
   
 # Set environment variables for optimized Hugging Face downloads
